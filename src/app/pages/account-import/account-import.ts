@@ -85,6 +85,6 @@ export class AccountImportPage {
 
   public async import(): Promise<void> {
     await this.wallets.addWallet(this.wallet)
-    await this.router.navigateByUrl('/tabs/portfolio', { skipLocationChange: true })
+    await this.router.navigateByUrl('/tabs/dashboard', { skipLocationChange: true })
   }
 }

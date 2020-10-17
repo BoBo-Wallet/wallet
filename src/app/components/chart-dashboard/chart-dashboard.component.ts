@@ -162,14 +162,15 @@ export class ChartDashboardComponent implements AfterViewInit, OnDestroy {
     if (this.chart) {
       const ctx: CanvasRenderingContext2D = (this.chart.ctx as any) as CanvasRenderingContext2D
 
-      const color1: string = '26E8CD' // rgb(122, 141, 169)
+      // const color1: string = '26E8CD' // rgb(122, 141, 169)
+      const color1: string = 'AFAFAF' // rgb(122, 141, 169)
 
       const gradientStroke1: CanvasGradient = ctx.createLinearGradient(0, 10, 0, 0)
       gradientStroke1.addColorStop(0, `#${color1}`)
 
       const gradientFill1: CanvasGradient = ctx.createLinearGradient(0, 100, 0, 0)
-      gradientFill1.addColorStop(1, 'rgba(38,232,205,0.34)')
-      gradientFill1.addColorStop(0, 'rgba(38,232,205,0.04) ')
+      gradientFill1.addColorStop(1, 'rgba(175,175,175,0.10)')
+      gradientFill1.addColorStop(0, 'rgba(175,175,175,0.00) ')
 
       this.chartColors[0] = {
         backgroundColor: gradientFill1,

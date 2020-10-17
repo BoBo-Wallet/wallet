@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core'
 })
 export class ExchangeListComponent {
   @Input()
+  public exchangeList: Array<string> = ['changelly', 'transak']
+
   public displayRawData: boolean = false
 }

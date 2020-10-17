@@ -3,32 +3,32 @@
     <ion-toolbar>
       <ion-buttons slot="start" (click)="openScanPage()">
         <ion-button color="secondary" shape="round">
-          <ion-icon name="scan-outline"></ion-icon>
+          <ion-icon src="/assets/img/scan_bobo.svg" class="bobo-header-icon" slot="start"></ion-icon>
         </ion-button>
       </ion-buttons>
 
-      <ion-title color="primary" class="ion-text-center">{{ 'dashboard.title' | translate }}</ion-title>
+      <ion-title color="medium" class="ion-text-center">{{ 'dashboard.title' | translate }}</ion-title>
+
       <ion-buttons slot="end">
         <ion-button color="secondary" shape="round">
-          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-icon src="/assets/img/profile.svg" class="bobo-header-icon"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-grid>
 </ion-header>
-<ion-content fullscreen="true">
+<ion-content fullscreen="true" class="bobo-bgm">
   <ion-grid fixed="true" class="ion-no-padding">
     <chart-dashboard [total]="total"></chart-dashboard>
     <ion-refresher slot="fixed" (ionRefresh)="  doRefresh($event)"><ion-refresher-content></ion-refresher-content></ion-refresher>
-
     <ng-container>
       <ion-card
-        style="background-color: #373737;"
-        *ngFor="let category of categories; 
+        class="bobo-dashbord-card-bg"
+        *ngFor="let category of categories;
         let i = index"
         [class.round-top-corner]="i==0"
       >
-        <ion-card-header>
+        <ion-card-header class="ion-no-padding-bottom">
           <ion-card-title color="medium">{{category}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
@@ -62,6 +62,13 @@
     <ng-template #loading>
       Loading ....
     </ng-template>
+    <ng-container>
+      <ion-card class="bobo-footer-background">
+        <ion-card-content class="bobo-footer-content">
+          <img src="assets/img/BoBo_Footer.svg" class="bobo-footer" />
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
   </ion-grid>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ng-container *ngIf="wallets | async as walletsArray">

@@ -1,5 +1,5 @@
 <ion-row class="ion-padding-horizontal ion-align-items-end ion-justify-content-center">
-  <h1 class="ion-no-margin">${{ total | number: '1.2-2' }}</h1>
+  <h1 class="ion-no-margin" style="padding-top: 25px;">${{ total | number: '1.2-2' }}</h1>
 </ion-row>
 <ion-row class="ion-padding-horizontal ion-align-items-end ion-justify-content-center">
   <ion-text [color]="percentageChange >= 0 ? 'primary' : 'danger'">
@@ -10,20 +10,20 @@
   </ion-text>
 </ion-row>
 <div>
-  <!-- <canvas
+  <canvas
     baseChart
     #baseChart="base-chart"
     width="700"
-    height="200px"
+    height="150px"
     [chartType]="chartType"
     [datasets]="chartDatasets"
     [labels]="chartLabels"
     [colors]="chartColors"
     [options]="chartOptions"
     [legend]="false"
-  ></canvas> -->
+  ></canvas>
 </div>
-<!-- <ion-row class="ion-padding-horizontal ion-padding-bottom ion-align-items-end ion-justify-content-center">
+<ion-row class="ion-padding-horizontal ion-padding-bottom ion-align-items-end ion-justify-content-center">
   <ion-button
     [color]="currentChart !== timeUnits.Minutes && rawData.length > 0 ? 'primary' : 'secondary'"
     size="small"
@@ -50,4 +50,4 @@
   >
     1y
   </ion-button>
-</ion-row> -->
+</ion-row>

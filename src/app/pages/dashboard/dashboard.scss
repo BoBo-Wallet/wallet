@@ -9,7 +9,12 @@
     stroke: #fff !important;
   }
 }
-
+.ion-no-padding-bottom {
+  padding-bottom: 0px;
+}
+.bobo-header-icon {
+  height: 28px;
+}
 .loading-content {
   color: white;
   font-weight: 300;
@@ -52,5 +57,26 @@ ion-card {
 .round-top-corner {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  margin-top: 80px;
+  margin-top: -8px;
+}
+.bobo-dashbord-card-bg {
+  background-color: #373737;
+}
+.bobo-footer-background {
+  background: var(--ion-background-color);
+}
+.bobo-footer-content {
+  text-align: center;
+}
+.bobo-bgm {
+  --background: none;
+  background-image: url('../../../assets/img/bobo_header_banner.svg');
+  background-repeat: no-repeat;
+  background-position-y: 74px;
+}
+.bobo-header-banner {
+  height: 130px;
+}
+.bobo-footer {
+  height: 55px;
 }

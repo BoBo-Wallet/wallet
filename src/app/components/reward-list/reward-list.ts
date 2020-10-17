@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core'
 })
 export class RewardListComponent {
   @Input()
+  public rewardList: Array<string> = ['rewards', 'offers', 'refferals', 'shopping']
+
   public displayRawData: boolean = false
 }

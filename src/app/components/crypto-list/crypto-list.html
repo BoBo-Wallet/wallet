@@ -1,6 +1,6 @@
 <ion-grid>
   <ion-row>
-    <ion-col class="ion-no-padding" lines="none" *ngFor="let walletGroup of walletGroups">
+    <ion-col class="ion-no-padding ion-margin-top" size="3" lines="none" *ngFor="let walletGroup of walletGroups" style="padding-top:5px">
       <crypto-item
         *ngIf="walletGroup.mainWallet"
         class="mainWallet"

@@ -47,7 +47,7 @@ export class InteractionSelectionPage {
     this.deepLinkProvider
       .sameDeviceDeeplink(this.preparedDataQR)
       .then(() => {
-        this.router.navigateByUrl('/tabs/portfolio').catch(handleErrorSentry(ErrorCategory.NAVIGATION))
+        this.router.navigateByUrl('/tabs/dashboard').catch(handleErrorSentry(ErrorCategory.NAVIGATION))
       })
       .catch(handleErrorSentry(ErrorCategory.DEEPLINK_PROVIDER))
   }
