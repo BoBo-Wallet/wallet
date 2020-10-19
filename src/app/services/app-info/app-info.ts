@@ -7,10 +7,10 @@ import { AppInfoPlugin } from 'src/app/capacitor-plugins/definitions'
   providedIn: 'root'
 })
 export class AppInfoProvider {
-  public appName = 'APP_NAME'
-  public packageName = 'PACKAGE_NAME'
-  public versionNumber = 'VERSION_NUMBER'
-  public versionCode: string | number = 'VERSION_CODE'
+  public appName = 'BoBo Wallet'
+  public packageName = 'bobo.wallet.in'
+  public versionNumber = '0.1-Beta'
+  public versionCode: string | number = '*****'
 
   private isInitialized: boolean = false
 
