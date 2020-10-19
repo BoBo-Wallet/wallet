@@ -9,9 +9,9 @@
 
       <ion-title color="medium" class="ion-text-center">{{ 'dashboard.title' | translate }}</ion-title>
 
-      <ion-buttons slot="end">
+      <ion-buttons slot="end" (click)="opensettingsPage()">
         <ion-button color="secondary" shape="round">
-          <ion-icon src="/assets/img/profile.svg" class="bobo-header-icon"></ion-icon>
+          <ion-icon src="/assets/img/settings.svg" class="bobo-header-icon"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>

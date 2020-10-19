@@ -114,8 +114,11 @@ export class DashboardPage {
   }
 
   public openScanPage() {
-    alert('testing')
     this.router.navigateByUrl('/tabs/scan').catch(handleErrorSentry(ErrorCategory.NAVIGATION))
+  }
+
+  public opensettingsPage() {
+    this.router.navigateByUrl('/tabs/settings').catch(handleErrorSentry(ErrorCategory.NAVIGATION))
   }
 
   public async doRefresh(event: any = null) {
