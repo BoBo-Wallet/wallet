@@ -1,4 +1,4 @@
-# AirGap Wallet
+# BoBo Wallet
 
 <p align="left">
     <img src="./banner.png" />
@@ -6,13 +6,13 @@
 
 > Self custody made simple and secure. Protect your crypto and store your private keys offline.
 
-[AirGap](https://airgap.it) is a crypto wallet system that lets you secure cypto assets with one secret on an offline device. The [AirGap Vault](https://github.com/airgap-it/airgap-vault) application is installed on a dedicated device that has no connection to any network, thus it is air gapped. The AirGap Wallet is installed on your everyday smartphone.
+[BoBo](https://airgap.it) is a crypto wallet system that lets you secure cypto assets with one secret on an offline device. The [BoBo Vault](https://github.com/airgap-it/airgap-vault) application is installed on a dedicated device that has no connection to any network, thus it is air gapped. The BoBo Wallet is installed on your everyday smartphone.
 
 ## Description
 
-AirGap Wallet has an overview of all accounts with their respective balances and transaction histories. AirGap Wallet never touches your secret data stored in the AirGap Vault. It is responsible for creating and broadcasting transactions. The prepared transaction is sent to the secure Vault over QR codes, where it is securely signed and sent back.
+BoBo Wallet has an overview of all accounts with their respective balances and transaction histories. BoBo Wallet never touches your secret data stored in the BoBo Vault. It is responsible for creating and broadcasting transactions. The prepared transaction is sent to the secure Vault over QR codes, where it is securely signed and sent back.
 
-AirGap Wallet is a hybrid application (using the same codebase for Android and iOS). Created using AirGap's protocol agnostic `airgap-coin-lib` library to interact with different protocols and our own secure storage implementation.
+BoBo Wallet is a hybrid application (using the same codebase for Android and iOS). Created using BoBo's protocol agnostic `airgap-coin-lib` library to interact with different protocols and our own secure storage implementation.
 
 <p align="left">
     <img src="./devices.png" />
@@ -25,7 +25,7 @@ AirGap Wallet is a hybrid application (using the same codebase for Android and i
 
 ## Features
 
-- Portfolio overview of accounts synced from AirGap Vault
+- Portfolio overview of accounts synced from BoBo Vault
 - Communication with the Vault application over QR codes if installed on a second device or app switching if installed on the same device
 - Create transactions for all supported currencies like Aeternity, Bitcoin, Ethereum, Tezos, Cosmos, Kusama, Polkadot, Groestlcoin etc.
 - Broadcast signed transactions
@@ -78,12 +78,12 @@ Before integrating a new feature, please quickly reach out to us in an issue so 
 
 - If you find any bugs, submit an [issue](../../issues) or open [pull-request](../../pulls).
 - If you want to integrate a new blockchain, please read the contributing guidelines in the [airgap-coin-lib](https://github.com/airgap-it/airgap-coin-lib) project.
-- Engage with other users and developers on the [AirGap Telegram](https://t.me/AirGap).
+- Engage with other users and developers on the [BoBo Telegram](https://t.me/BoBo).
 
 ## Related Projects
 
-- [AirGap Wallet](https://github.com/airgap-it/airgap-wallet)
+- [BoBo Wallet](https://github.com/airgap-it/airgap-wallet)
 - [airgap-coin-lib](https://github.com/airgap-it/airgap-coin-lib)
 
-- [AirGap Linux Distribution](https://github.com/airgap-it/airgap-distro)
+- [BoBo Linux Distribution](https://github.com/airgap-it/airgap-distro)
 - [apk-signer](https://github.com/airgap-it/airgap-raspberry-apk-signer)
