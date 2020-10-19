@@ -45,9 +45,9 @@ export class SettingsPage {
 
   public share(): void {
     const options = {
-      title: 'Checkout airgap.it', // Set a title for any message. This will be the subject if sharing to email
-      text: 'Take a look at the app I found. Its the most secure practical way to do crypto transactions.', // Set some text to share
-      url: 'https://www.airgap.it', // Set a URL to share
+      title: 'Checkout BoBo Wallet', // Set a title for any message. This will be the subject if sharing to email
+      text: 'Take a look at the app I found. It gives cyrpto cashback for cryptocurrency transaction.', // Set some text to share
+      url: 'https://www.hypermine.in/bobo', // Set a URL to share
       dialogTitle: 'Pick an app' // Set a title for the share modal. Android only
     }
 
@@ -75,7 +75,7 @@ export class SettingsPage {
   }
 
   public feedback(): void {
-    this.browserService.openUrl('https://github.com/airgap-it/airgap-wallet/issues')
+    this.browserService.openUrl('https://github.com/BoBo-Wallet/wallet/pulls')
   }
 
   public async telegram(): Promise<void> {
@@ -87,11 +87,6 @@ export class SettingsPage {
           label: this.translateService.instant('settings.channel.international'),
           value: 'International',
           checked: true
-        },
-        {
-          type: 'radio',
-          label: this.translateService.instant('settings.channel.chinese'),
-          value: 'Chinese'
         }
       ],
       buttons: [
@@ -112,7 +107,7 @@ export class SettingsPage {
                 break
               case 'International':
               default:
-                this.browserService.openUrl('https://t.me/AirGap')
+                this.browserService.openUrl('https://t.me/bobo_wallet')
             }
           }
         }
@@ -142,11 +137,11 @@ export class SettingsPage {
   }
 
   public githubWallet(): void {
-    this.browserService.openUrl('https://github.com/airgap-it')
+    this.browserService.openUrl('https://github.com/BoBo-Wallet')
   }
 
   public faq(): void {
-    this.browserService.openUrl('https://airgap.it/#faq')
+    this.browserService.openUrl('https://hypermine.in/bobo/#faq')
   }
 
   public aboutBeacon(): void {
