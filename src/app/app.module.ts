@@ -63,6 +63,8 @@ import {
   STATUS_BAR_PLUGIN
 } from './capacitor-plugins/injection-tokens'
 import { ProtocolsProvider } from './services/protocols/protocols'
+import { ServiceWorkerModule } from '@angular/service-worker'
+import { environment } from '../environments/environment'
 
 const { App, AppInfo, Browser, Clipboard, Permissions, PushNotifications, Share, SplashScreen, StatusBar } = Plugins
 
@@ -103,7 +105,8 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     ProtocolSelectPageModule,
     BeaconRequestPageModule,
     ExchangeSelectPageModule,
-    IntroductionPushPageModule
+    IntroductionPushPageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     { provide: APP_PLUGIN, useValue: App },
