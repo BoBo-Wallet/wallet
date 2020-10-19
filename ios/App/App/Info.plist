@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>AirGap Wallet</string>
+	<string>BoBo Wallet</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -49,11 +49,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>AirGap uses your camera to scan QR Codes of transactions.</string>
+	<string>BoBo uses your camera to scan QR Codes of transactions.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>AirGap does not need your location data.</string>
+	<string>BoBo does not need your location data.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>AirGap does not need access to your photo library.</string>
+	<string>BoBo does not need access to your photo library.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

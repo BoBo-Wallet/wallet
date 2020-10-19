@@ -13,7 +13,7 @@ import { TransactionQrPage } from './pages/transaction-qr.po'
 
 const time: Date = new Date()
 
-describe('AirGap Wallet', () => {
+describe('BoBo Wallet', () => {
   let page: AppPage
   let portfolioPage: PortfolioPage
   let settingsPage: SettingsPage
@@ -51,7 +51,7 @@ describe('AirGap Wallet', () => {
     const text: string = await page.getParagraphText()
 
     await expect(text).toContain(
-      'Start by adding coins to AirGap Wallet, you will also need the AirGap Vault application where your secret is securely stored.'
+      'Start by adding coins to BoBo Wallet, you will also need the BoBo Vault application where your secret is securely stored.'
     )
   })
 
