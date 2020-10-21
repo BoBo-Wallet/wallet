@@ -1,3 +1,12 @@
-<div class="card-columns">
-  Tipping List
-</div>
+<ion-grid>
+  <ion-row>
+    <ion-col class="ion-margin-top" size="3" lines="none" *ngFor="let item of exchangeList;">
+      <div class="ion-text-capitalize" style="text-align: center;">
+        <img src="./assets/img/tippings/{{item}}.svg" class="exchange-icon-size" />
+        <p>
+          {{item}}
+        </p>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

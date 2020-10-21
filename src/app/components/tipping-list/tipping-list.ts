@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core'
 })
 export class TippingListComponent {
   @Input()
+  public exchangeList: Array<string> = ['superhero']
+
   public displayRawData: boolean = false
 }

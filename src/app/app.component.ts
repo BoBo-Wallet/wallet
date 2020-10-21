@@ -53,8 +53,8 @@ export class AppComponent {
     await Promise.all([this.platform.ready(), this.protocolsProvider.isReady])
 
     if (this.platform.is('hybrid')) {
-      this.statusBar.setStyle({ style: StatusBarStyle.Light })
-      this.statusBar.setBackgroundColor({ color: '#FFFFFF' })
+      this.statusBar.setStyle({ style: StatusBarStyle.Dark })
+      this.statusBar.setBackgroundColor({ color: '#000000' })
       this.splashScreen.hide()
 
       this.pushProvider.initPush()
