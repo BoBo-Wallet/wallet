@@ -46,7 +46,7 @@ export interface ExchangeTransaction {
 export class ExchangeProvider implements Exchange {
   private exchange: Exchange
   private exchangeIdentifier: ExchangeEnum
-  private exchangeSubject: BehaviorSubject<string> = new BehaviorSubject('ChangeNow')
+  private exchangeSubject: BehaviorSubject<string> = new BehaviorSubject('Changelly')
 
   private pendingTransactions: ExchangeTransaction[] = []
 

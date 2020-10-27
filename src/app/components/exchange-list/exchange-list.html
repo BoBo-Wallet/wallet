@@ -1,7 +1,7 @@
 <ion-grid>
   <ion-row>
     <ion-col class="ion-margin-top" size="3" lines="none" *ngFor="let item of exchangeList;">
-      <div class="ion-text-capitalize" style="text-align: center;">
+      <div class="ion-text-capitalize" style="text-align: center;" (click)="openPage(item)">
         <img src="./assets/img/exchanges/{{item}}.svg" class="exchange-icon-size" />
         <p>
           {{item}}
