@@ -19,7 +19,7 @@ import { ChartsModule } from 'ng2-charts'
 import { MomentModule } from 'ngx-moment'
 import { ExchangeSelectPageModule } from './pages/exchange-select/exchange-select.module'
 import { ExchangeSelectPage } from './pages/exchange-select/exchange-select.page'
-
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ComponentsModule } from './components/components.module'
@@ -143,7 +143,8 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     AppInfoProvider,
     PushProvider,
     PushBackendProvider,
-    SerializerService
+    SerializerService,
+    InAppBrowser
   ],
   bootstrap: [AppComponent]
 })

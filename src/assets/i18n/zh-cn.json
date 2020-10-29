@@ -1,5 +1,6 @@
 {
     "account-transaction-list.title": "账户",
+    "account-transaction-list.buy-sell_label": "BUY/SELL",
     "account-transaction-list.transactions_label": "交易",
     "account-transaction-list.receive_label": "收款",
     "account-transaction-list.send_label": "付款",
@@ -124,6 +125,7 @@
     "sub-account-select.text": "选择您打算授权的<strong>账号</strong>。您将需要签署一个交易用来授权。",
     "sub-account-select.accounts_label": "账号",
     "account-detail.tokens_label": "代币",
+    "account-detail.buy-sell_label": "BUY/SELL",
     "account-detail.accounts_label": "账号",
     "account-detail.add-tokens_label": "添加代币",
     "account-detail.add-accounts_label": "添加账号",
