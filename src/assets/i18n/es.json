@@ -5,6 +5,7 @@
   "account-transaction-list.send_label": "Enviar",
   "account-transaction-list.no-transactions_text": "Aún no hay transacciones para esta cuenta.",
   "introduction.title": "El nuevo estandar de billetera crypto",
+  "account-transaction-list.buy-sell_label": "BUY/SELL",
   "introduction.highest.label": "Seguridad alta",
   "introduction.highest.text": "Con el <b>enfoque de dos dispositivos</b> de BoBo el manejo seguro de claves se vuelve más accesible.</p>",
   "introduction.medium.label": "Seguridad media",

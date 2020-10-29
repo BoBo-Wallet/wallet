@@ -18,6 +18,7 @@ import { DataService, DataServiceKey } from '../../services/data/data.service'
 import { OperationsProvider } from '../../services/operations/operations'
 import { PushBackendProvider } from '../../services/push-backend/push-backend'
 import { ErrorCategory, handleErrorSentry } from '../../services/sentry-error-handler/sentry-error-handler'
+import { TransakProvider } from '../../services/transak/transak'
 import { StorageProvider } from '../../services/storage/storage'
 import { supportsDelegation } from 'src/app/helpers/delegation'
 import { timer, Subscription } from 'rxjs'
@@ -89,6 +90,7 @@ export class AccountTransactionListPage {
     public readonly http: HttpClient,
     public readonly dataService: DataService,
     private readonly route: ActivatedRoute,
+    public transakProvider: TransakProvider,
     private readonly storageProvider: StorageProvider,
     private readonly pushBackendProvider: PushBackendProvider,
     private readonly exchangeProvider: ExchangeProvider,

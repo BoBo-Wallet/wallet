@@ -50,6 +50,14 @@ export class ActionGroup {
       return this.getKusamaActions()
     })
 
+    actionMap.set(MainProtocolSymbols.AE, async () => {
+      return this.getAeternityActions()
+    })
+
+    actionMap.set(MainProtocolSymbols.ONE, async () => {
+      return this.getHarmonyActions()
+    })
+
     const actionFunction: () => Promise<Action<any, any>[]> | undefined = actionMap.get(this.callerContext.protocolIdentifier)
 
     return actionFunction ? actionFunction() : []
@@ -57,7 +65,7 @@ export class ActionGroup {
 
   private getTezosActions(): Action<any, any>[] {
     const delegateButtonAction = this.createDelegateButtonAction()
-
+    const buySellActionButton = this.createBuySellButtonAction()
     const addTokenButtonAction = new ButtonAction(
       { name: 'account-transaction-list.add-tokens_label', icon: 'add', identifier: 'add-tokens' },
       () => {
@@ -83,7 +91,7 @@ export class ActionGroup {
       }
     )
 
-    return [delegateButtonAction, addTokenButtonAction]
+    return [delegateButtonAction, addTokenButtonAction, buySellActionButton]
   }
 
   public getImportAccountsAction(): ButtonAction<string[], ImportAccoutActionContext> {
@@ -166,13 +174,26 @@ export class ActionGroup {
       }
     )
 
-    return [addTokenButtonAction]
+    const buySellActionButton = this.createBuySellButtonAction()
+    return [addTokenButtonAction, buySellActionButton]
   }
 
   private getPolkadotActions(): Action<any, any>[] {
     const delegateButtonAction = this.createDelegateButtonAction()
 
     return [delegateButtonAction]
+  }
+
+  private getAeternityActions(): Action<any, any>[] {
+    const buySellActionButton = this.createBuySellButtonAction()
+
+    return [buySellActionButton]
+  }
+
+  private getHarmonyActions(): Action<any, any>[] {
+    const buySellActionButton = this.createBuySellButtonAction()
+
+    return [buySellActionButton]
   }
 
   private getKusamaActions(): Action<any, any>[] {
@@ -220,6 +241,22 @@ export class ActionGroup {
             .navigateByUrl('/delegation-detail/' + DataServiceKey.DETAIL)
             .catch(handleErrorSentry(ErrorCategory.NAVIGATION))
 
+          resolve()
+        })
+      })
+    })
+  }
+
+  private createBuySellButtonAction(): ButtonAction<void, void> {
+    return new ButtonAction({ name: 'account-transaction-list.buy-sell_label', icon: '', identifier: 'buysell-action' }, () => {
+      return new SimpleAction(() => {
+        return new Promise<void>(resolve => {
+          let cryptoSymbol: string = this.callerContext.wallet.protocol.marketSymbol.toUpperCase()
+
+          let address: string = this.callerContext.wallet.addresses[0]
+          if (cryptoSymbol && address) {
+            this.callerContext.transakProvider.createOrder(cryptoSymbol, address)
+          }
           resolve()
         })
       })
