@@ -7,11 +7,11 @@ airgapCoinLib.addSupportedProtocol(new airgapCoinLib.AeternityProtocol())
 airgapCoinLib.addSupportedProtocol(new airgapCoinLib.HarmonyProtocol())
 airgapCoinLib.addSupportedProtocol(new airgapCoinLib.BitcoinProtocol())
 airgapCoinLib.addSupportedProtocol(new airgapCoinLib.EthereumProtocol())
-airgapCoinLib.addSupportedProtocol(new airgapCoinLib.GroestlcoinProtocol())
-airgapCoinLib.addSupportedProtocol(new airgapCoinLib.TezosProtocol())
-airgapCoinLib.addSupportedProtocol(new airgapCoinLib.CosmosProtocol())
-airgapCoinLib.addSupportedProtocol(new airgapCoinLib.KusamaProtocol())
-airgapCoinLib.addSupportedProtocol(new airgapCoinLib.PolkadotProtocol())
+// airgapCoinLib.addSupportedProtocol(new airgapCoinLib.GroestlcoinProtocol())
+// airgapCoinLib.addSupportedProtocol(new airgapCoinLib.TezosProtocol())
+// airgapCoinLib.addSupportedProtocol(new airgapCoinLib.CosmosProtocol())
+// airgapCoinLib.addSupportedProtocol(new airgapCoinLib.KusamaProtocol())
+// airgapCoinLib.addSupportedProtocol(new airgapCoinLib.PolkadotProtocol())
 
 self.onmessage = function(event) {
   airgapCoinLib.isCoinlibReady().then(function() {

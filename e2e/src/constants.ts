@@ -1,7 +1,7 @@
 export const accounts = [
   {
     sync:
-      'airgap-wallet://?d=AerPyFXzb1kpQPp59Mug3kmKpYfPahzZ1jTW4ykyuaJcVLXeuEvLGCiEr3Fxi8H4P9513SA5RjGN87sGFWmZJ2ZoJCy8bjbJV6RthWtJpjYR4n5Ei8ahAuAWUpogSiasEK6KBhHnE',
+      'bobo-wallet://?d=AerPyFXzb1kpQPp59Mug3kmKpYfPahzZ1jTW4ykyuaJcVLXeuEvLGCiEr3Fxi8H4P9513SA5RjGN87sGFWmZJ2ZoJCy8bjbJV6RthWtJpjYR4n5Ei8ahAuAWUpogSiasEK6KBhHnE',
     toAddress: 'ak_gxMtcfvnd7aN9XdpmdNgRRETnLL4TNQ4uJgyLzcbBFa3vx6Da',
     symbol: 'AE',
     shortAddress: 'ak_gx...vx6Da',
@@ -12,7 +12,7 @@ export const accounts = [
   /*
   {
     sync:
-      'airgap-wallet://?d=AerPyFYLtBvLFRMdCRAB4HPzxGrSdk1eyBwvtseZGnuWcky8iQfXLw1VzFzbYvZswZusYJdtvKs1vJDt8hb8NC44sktvJPumRB439nTRTTxhGknfTVHbhwdm6FFoFVihXvd8Kgk9i',
+      'bobo-wallet://?d=AerPyFYLtBvLFRMdCRAB4HPzxGrSdk1eyBwvtseZGnuWcky8iQfXLw1VzFzbYvZswZusYJdtvKs1vJDt8hb8NC44sktvJPumRB439nTRTTxhGknfTVHbhwdm6FFoFVihXvd8Kgk9i',
     toAddress: '0xd709a66264b4055EC23E2Af8B13D06a6375Bb24c',
     symbol: 'ETH',
     shortAddress: '0xd70...Bb24c',

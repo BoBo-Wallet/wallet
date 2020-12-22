@@ -210,7 +210,7 @@ export class BeaconRequestPage implements OnInit {
           payload: {
             publicKey: selectedWallet.publicKey,
             transaction,
-            callback: 'airgap-wallet://?d='
+            callback: 'bobo-wallet://?d='
           }
         }
       ])
@@ -263,7 +263,7 @@ export class BeaconRequestPage implements OnInit {
           payload: {
             publicKey: selectedWallet.publicKey,
             transaction: forgedTransaction,
-            callback: 'airgap-wallet://?d='
+            callback: 'bobo-wallet://?d='
           }
         }
       ])

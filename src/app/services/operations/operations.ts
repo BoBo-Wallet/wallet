@@ -315,7 +315,7 @@ export class OperationsProvider {
         payload: {
           publicKey: wallet.publicKey,
           transaction: transaction as any, // TODO: Type
-          callback: 'airgap-wallet://?d='
+          callback: 'bobo-wallet://?d='
         }
       }
     ])

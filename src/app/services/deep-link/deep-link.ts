@@ -106,7 +106,7 @@ export class DeepLinkProvider {
         payload: {
           publicKey: wallet.publicKey,
           transaction: rawUnsignedTx as any,
-          callback: 'airgap-wallet://?d='
+          callback: 'bobo-wallet://?d='
         }
       }
     ])

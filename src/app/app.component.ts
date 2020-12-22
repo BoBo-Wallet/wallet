@@ -110,15 +110,20 @@ export class AppComponent {
   public async ngAfterViewInit() {
     await this.platform.ready()
     if (this.platform.is('ios')) {
+      console.log('Hello Memsab-ios')
+
       this.translate.get(['back-button']).subscribe((translated: { [key: string]: string | undefined }) => {
         const back: string = translated['back-button']
         this.config.set('backButtonText', back)
       })
     }
     if (this.platform.is('hybrid')) {
+      console.log('Hello Memsab-hybrid')
+
       this.app.addListener('appUrlOpen', (data: AppUrlOpen) => {
         this.ngZone.run(() => {
-          if (data.url.startsWith('airgap-wallet://')) {
+          console.log('Hello Memsab-hybrid-appurl')
+          if (data.url.startsWith('bobo-wallet://')) {
             console.log('Successfully matched route', JSON.stringify(data.url))
             this.schemeRoutingProvider.handleNewSyncRequest(this.router, data.url).catch(handleErrorSentry(ErrorCategory.SCHEME_ROUTING))
           } else {

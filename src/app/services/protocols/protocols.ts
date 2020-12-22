@@ -6,32 +6,32 @@ import {
   AeternityProtocol,
   HarmonyProtocol,
   BitcoinProtocol,
-  CosmosProtocol,
+  // CosmosProtocol,
   EthereumProtocol,
   GenericERC20,
   getProtocolByIdentifier,
-  GroestlcoinProtocol,
-  KusamaProtocol,
-  PolkadotProtocol,
-  supportedProtocols,
-  TezosKtProtocol,
-  TezosProtocol
+  // GroestlcoinProtocol,
+  // KusamaProtocol,
+  // PolkadotProtocol,
+  supportedProtocols
+  // TezosKtProtocol,
+  // TezosProtocol
 } from '@bobo-wallet/coin-lib'
 import {
   EthereumERC20ProtocolConfig,
   EthereumERC20ProtocolOptions,
   EthereumProtocolNetwork
 } from '@bobo-wallet/coin-lib/dist/protocols/ethereum/EthereumProtocolOptions'
-import { TezosBTC } from '@bobo-wallet/coin-lib/dist/protocols/tezos/fa/TezosBTC'
-import { TezosBTCProtocolConfig, TezosFAProtocolOptions } from '@bobo-wallet/coin-lib/dist/protocols/tezos/fa/TezosFAProtocolOptions'
-import { TezosNetwork } from '@bobo-wallet/coin-lib/dist/protocols/tezos/TezosProtocol'
-import {
-  TezblockBlockExplorer,
-  TezosProtocolNetwork,
-  TezosProtocolNetworkExtras,
-  TezosProtocolOptions
-} from '@bobo-wallet/coin-lib/dist/protocols/tezos/TezosProtocolOptions'
-import { NetworkType } from '@bobo-wallet/coin-lib/dist/utils/ProtocolNetwork'
+// import { TezosBTC } from '@bobo-wallet/coin-lib/dist/protocols/tezos/fa/TezosBTC'
+// import { TezosBTCProtocolConfig, TezosFAProtocolOptions } from '@bobo-wallet/coin-lib/dist/protocols/tezos/fa/TezosFAProtocolOptions'
+// import { TezosNetwork } from '@bobo-wallet/coin-lib/dist/protocols/tezos/TezosProtocol'
+// import {
+//   TezblockBlockExplorer,
+//   TezosProtocolNetwork,
+//   TezosProtocolNetworkExtras,
+//   TezosProtocolOptions
+// } from '@bobo-wallet/coin-lib/dist/protocols/tezos/TezosProtocolOptions'
+// import { NetworkType } from '@bobo-wallet/coin-lib/dist/utils/ProtocolNetwork'
 import { ProtocolSymbols, SubProtocolSymbols } from '@bobo-wallet/coin-lib/dist/utils/ProtocolSymbols'
 
 import { tokens } from './tokens'
@@ -64,48 +64,48 @@ export class ProtocolsProvider {
       addSupportedProtocol(new HarmonyProtocol())
       addSupportedProtocol(new BitcoinProtocol())
       addSupportedProtocol(new EthereumProtocol())
-      addSupportedProtocol(new GroestlcoinProtocol())
-      addSupportedProtocol(new TezosProtocol())
-      addSupportedProtocol(new CosmosProtocol())
-      // TODO: enable when we can change the symbol back to "DOT"
-      // addSupportedProtocol(new PolkadotProtocol())
-      addSupportedProtocol(new KusamaProtocol())
+      // addSupportedProtocol(new GroestlcoinProtocol())
+      // addSupportedProtocol(new TezosProtocol())
+      // addSupportedProtocol(new CosmosProtocol())
+      // // TODO: enable when we can change the symbol back to "DOT"
+      // // addSupportedProtocol(new PolkadotProtocol())
+      // addSupportedProtocol(new KusamaProtocol())
 
-      // for a period of time after the redenomination occurs,
-      // it is recommended to use "New DOT" to clearly indicate that we have complied with the change
-      // Web3 Foundation will follow up on when to change "New DOT" to "DOT"
-      // TODO: remove when we can change the symbol to "DOT"
-      const polkadot: PolkadotProtocol = new PolkadotProtocol()
-      polkadot.symbol = 'New DOT'
-      polkadot.feeSymbol = 'New DOT'
-      addSupportedProtocol(polkadot)
+      // // for a period of time after the redenomination occurs,
+      // // it is recommended to use "New DOT" to clearly indicate that we have complied with the change
+      // // Web3 Foundation will follow up on when to change "New DOT" to "DOT"
+      // // TODO: remove when we can change the symbol to "DOT"
+      // const polkadot: PolkadotProtocol = new PolkadotProtocol()
+      // polkadot.symbol = 'New DOT'
+      // polkadot.feeSymbol = 'New DOT'
+      // addSupportedProtocol(polkadot)
 
-      const carthagenetNetwork: TezosProtocolNetwork = new TezosProtocolNetwork(
-        'Carthagenet',
-        NetworkType.TESTNET,
-        'https://tezos-carthagenet-node-1.kubernetes.papers.tech',
-        new TezblockBlockExplorer('https://carthagenet.tezblock.io'),
-        new TezosProtocolNetworkExtras(
-          TezosNetwork.CARTHAGENET,
-          'https://tezos-carthagenet-conseil-1.kubernetes.papers.tech',
-          TezosNetwork.CARTHAGENET,
-          'airgap00391'
-        )
-      )
-      const carthagenetProtocol: TezosProtocol = new TezosProtocol(new TezosProtocolOptions(carthagenetNetwork))
+      // const carthagenetNetwork: TezosProtocolNetwork = new TezosProtocolNetwork(
+      //   'Carthagenet',
+      //   NetworkType.TESTNET,
+      //   'https://tezos-carthagenet-node-1.kubernetes.papers.tech',
+      //   new TezblockBlockExplorer('https://carthagenet.tezblock.io'),
+      //   new TezosProtocolNetworkExtras(
+      //     TezosNetwork.CARTHAGENET,
+      //     'https://tezos-carthagenet-conseil-1.kubernetes.papers.tech',
+      //     TezosNetwork.CARTHAGENET,
+      //     'airgap00391'
+      //   )
+      // )
+      // const carthagenetProtocol: TezosProtocol = new TezosProtocol(new TezosProtocolOptions(carthagenetNetwork))
 
-      addSupportedProtocol(carthagenetProtocol)
+      // addSupportedProtocol(carthagenetProtocol)
 
-      addSubProtocol(carthagenetProtocol, new TezosKtProtocol(new TezosProtocolOptions(carthagenetNetwork)))
-      addSubProtocol(
-        carthagenetProtocol,
-        new TezosBTC(
-          new TezosFAProtocolOptions(
-            carthagenetNetwork,
-            new TezosBTCProtocolConfig(undefined, undefined, undefined, undefined, 'KT1TH8YZqLy2GFe7yy2JC7oazRj8nyMtzy4W')
-          )
-        )
-      )
+      // addSubProtocol(carthagenetProtocol, new TezosKtProtocol(new TezosProtocolOptions(carthagenetNetwork)))
+      // addSubProtocol(
+      //   carthagenetProtocol,
+      //   new TezosBTC(
+      //     new TezosFAProtocolOptions(
+      //       carthagenetNetwork,
+      //       new TezosBTCProtocolConfig(undefined, undefined, undefined, undefined, 'KT1TH8YZqLy2GFe7yy2JC7oazRj8nyMtzy4W')
+      //     )
+      //   )
+      // )
 
       this.addProtocols()
       this._isReady.resolve(true)
@@ -123,8 +123,8 @@ export class ProtocolsProvider {
   }
 
   public addProtocols() {
-    addSubProtocol(new TezosProtocol(), new TezosKtProtocol())
-    addSubProtocol(new TezosProtocol(), new TezosBTC())
+    // addSubProtocol(new TezosProtocol(), new TezosKtProtocol())
+    // addSubProtocol(new TezosProtocol(), new TezosBTC())
     this.subProtocols.forEach(supportedSubAccount => {
       supportedSubAccount.subProtocols.forEach(subProtocol => {
         const protocol = getProtocolByIdentifier(supportedSubAccount.protocol)
