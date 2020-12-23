@@ -22,11 +22,14 @@ import { FromToComponent } from './from-to/from-to'
 import { IdenticonComponent } from './identicon/identicon'
 import { PortfolioItemComponent } from './portfolio-item/portfolio-item'
 import { CryptoItemComponent } from './crypto-item/crypto-item'
+import { BifiItemComponent } from './bifi-item/bifi-item'
+import { BifiSymbolComponent } from './bifi-symbol/bifi-symbol'
 import { CategoryComponent } from './category/category'
 import { CryptoListComponent } from './crypto-list/crypto-list'
 import { ExchangeListComponent } from './exchange-list/exchange-list'
 import { RewardListComponent } from './reward-list/reward-list'
 import { TippingListComponent } from './tipping-list/tipping-list'
+import { FarmListComponent } from './farm-list/farm-list'
 import { QrClipboardComponent } from './qr-clipboard/qr-clipboard'
 import { SignedTransactionComponent } from './signed-transaction/signed-transaction'
 import { SwapComponent } from './swap/swap'
@@ -51,6 +54,7 @@ import { DelegateActionPopoverComponent } from './delegate-action-popover copy/d
     ExchangeListComponent,
     RewardListComponent,
     TippingListComponent,
+    FarmListComponent,
     IdenticonComponent,
     ChartComponent,
     ChartDashboardComponent,
@@ -63,6 +67,8 @@ import { DelegateActionPopoverComponent } from './delegate-action-popover copy/d
     EmptyStateComponent,
     CurrencySymbolComponent,
     CryptoSymbolComponent,
+    BifiItemComponent,
+    BifiSymbolComponent,
     QrClipboardComponent,
     SignedTransactionComponent,
     TezosDelegationCard,
@@ -96,10 +102,13 @@ import { DelegateActionPopoverComponent } from './delegate-action-popover copy/d
   exports: [
     PortfolioItemComponent,
     CryptoItemComponent,
+    BifiItemComponent,
+    BifiSymbolComponent,
     CategoryComponent,
     CryptoListComponent,
     ExchangeListComponent,
     RewardListComponent,
+    FarmListComponent,
     TippingListComponent,
     ChartComponent,
     ChartDashboardComponent,

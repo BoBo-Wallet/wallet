@@ -1,0 +1,87 @@
+<ion-header class="ion-no-border">
+  <ion-grid fixed="true" class="ion-no-padding">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/dashboard"></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ 'defi.title' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-grid>
+</ion-header>
+
+<ion-content fullscreen="true" class="bobo-bgm">
+  <ion-grid fixed="true" class="ion-no-padding">
+    <ng-container>
+      <ion-card
+        class="bobo-dashbord-card-bg"
+        *ngFor="let pool of pools;
+        let i = index"
+        [class.round-top-corner]="i==0"
+      >
+        <ion-card-header class="ion-no-padding-top" style="padding-top: 0;">
+          <ion-card-title color="medium">
+            <bifi-item *ngIf="pool" class="mainWallet" tappable [pool]="pool"></bifi-item>
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-grid>
+            <ion-row class="ion-padding-bottom">
+              <ion-col>
+                <div>ROI :</div>
+                <strong>{{ pool.daily }} %</strong>
+                / Day
+              </ion-col>
+              <ion-col>
+                <div>YIELD/$1000 :</div>
+                <div>
+                  <strong>$ {{ pool.yeild1kyearly }}</strong>
+                  / Year
+                </div>
+                <div>
+                  <strong>$ {{ pool.yeild1kdaily }}</strong>
+                  / Day
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row class="ion-padding-bottom">
+              <ion-col>
+                <div>TVL :</div>
+                <strong>$ {{ pool.tvl }}</strong>
+              </ion-col>
+              <ion-col>
+                <div>APY :</div>
+                <strong>{{ pool.defaultApy }} %</strong>
+              </ion-col>
+            </ion-row>
+            <!-- <ion-row>
+              <ion-col>
+                <div>STAKE :</div>
+                <strong>{{ pool.tvl }}</strong>
+              </ion-col>
+            </ion-row> -->
+          </ion-grid>
+          <ng-template #loading>
+            <ion-list lines="none" class="ion-margin-top">
+              <ion-card>
+                <portfolio-item></portfolio-item>
+              </ion-card>
+              <ion-card>
+                <portfolio-item></portfolio-item>
+              </ion-card>
+              <ion-card>
+                <portfolio-item></portfolio-item>
+              </ion-card>
+              <ion-card>
+                <portfolio-item></portfolio-item>
+              </ion-card>
+            </ion-list>
+          </ng-template>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+    <ng-template #loading>
+      Loading ....
+    </ng-template>
+  </ion-grid>
+</ion-content>

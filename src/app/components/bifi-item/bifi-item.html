@@ -1,0 +1,11 @@
+<ion-item *ngIf="pool" class="ion-no-padding">
+  <bifi-symbol class="item__image" [symbol]="pool.logo" slot="start"></bifi-symbol>
+  <ion-label>
+    <h2>
+      <strong>{{ pool.name }}</strong>
+      <div style="margin:0;font-size: 12px;color: #666;">{{ pool.tokenDescription }}</div>
+    </h2>
+  </ion-label>
+
+  <!-- <ion-radio *ngIf="radioList" [value]="pool.identifier" slot="end"></ion-radio> -->
+</ion-item>

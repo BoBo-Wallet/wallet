@@ -45,6 +45,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'defi',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../beef-finance/beef-finance.module').then(m => m.BeefFinancePageModule)
+          }
+        ]
+      },
+      {
         path: 'settings',
         children: [
           {

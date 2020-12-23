@@ -10,6 +10,7 @@ export class DashboardExchangeService {
 
   public async goToPage(pageName: string): Promise<void> {
     if (pageName == 'changelly') this.router.navigateByUrl('/tabs/exchange').catch(handleErrorSentry(ErrorCategory.NAVIGATION))
+    if (pageName == 'bifi') this.router.navigateByUrl('/tabs/defi').catch(handleErrorSentry(ErrorCategory.NAVIGATION))
     if (pageName == 'transak') {
       this.transakProvider.createOrder('ETH', '')
     }

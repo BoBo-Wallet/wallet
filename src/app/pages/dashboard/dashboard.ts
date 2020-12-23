@@ -24,7 +24,7 @@ export class DashboardPage {
   public total: number = 0
   public changePercentage: number = 0
 
-  public categories: Array<string> = ['Portfolio', 'Exchange', 'Rewards', 'Tipping']
+  public categories: Array<string> = ['Portfolio', 'Exchange', 'Yield Farming', 'Rewards', 'Tipping']
 
   public wallets: Observable<AirGapMarketWallet[]>
   public walletGroups: ReplaySubject<WalletGroup[]> = new ReplaySubject(1)
