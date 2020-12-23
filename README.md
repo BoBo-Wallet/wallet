@@ -1,27 +1,22 @@
 # BoBo Wallet
 
-<p align="left">
+<!-- <p align="left">
     <img src="./banner.png" />
-</p>
+</p> -->
 
 > Self custody made simple and secure. Protect your crypto and store your private keys offline.
 
-[BoBo](https://airgap.it) is a crypto wallet system that lets you secure cypto assets with one secret on an offline device. The [BoBo Vault](https://github.com/airgap-it/airgap-vault) application is installed on a dedicated device that has no connection to any network, thus it is air gapped. The BoBo Wallet is installed on your everyday smartphone.
+[BoBo](https://github.com/BoBo-Wallet/wallet/tree/feature-bsc) is a crypto wallet system that lets you secure cypto assets with one secret on an offline device. The [BoBo Vault](https://github.com/BoBo-Wallet/vault) application is installed on a dedicated device that has no connection to any network, thus it is air gapped. The BoBo Wallet is installed on your everyday smartphone.
 
 ## Description
 
 BoBo Wallet has an overview of all accounts with their respective balances and transaction histories. BoBo Wallet never touches your secret data stored in the BoBo Vault. It is responsible for creating and broadcasting transactions. The prepared transaction is sent to the secure Vault over QR codes, where it is securely signed and sent back.
 
-BoBo Wallet is a hybrid application (using the same codebase for Android and iOS). Created using BoBo's protocol agnostic `airgap-coin-lib` library to interact with different protocols and our own secure storage implementation.
+BoBo Wallet is a hybrid application (using the same codebase for Android and iOS). Created using BoBo's protocol agnostic `bobo-coin-lib` library to interact with different protocols and our own secure storage implementation.
 
 <p align="left">
     <img src="./devices.png" />
 </p>
-
-## Download
-
-- [Google Play](https://play.google.com/store/apps/details?id=it.airgap.wallet)
-- [App Store](https://itunes.apple.com/us/app/airgap-wallet/id1420996542?l=de&ls=1&mt=8)
 
 ## Features
 
